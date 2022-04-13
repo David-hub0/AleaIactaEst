@@ -2,7 +2,7 @@ import discord
 import unifier
 
 client = discord.Client()
-discordBotToken = 'OTYxNTg0ODg0NDUzODc5ODA4.Yk7HtQ.vep5gi2PpFjQ42rhgDEaqz_Q798'
+discordBotToken = ''
 
 
 # Ein rdy-check ob der bot sich mit discord verbinden kann
