@@ -1,13 +1,18 @@
 import discord
+
+import botToken
 import unifier
 
 client = discord.Client()
-discordBotToken = ''
+discordBotToken = botToken.discordbotboken()
 
 
-# Ein rdy-check ob der bot sich mit discord verbinden kann
+#
 @client.event
 async def on_ready():
+    """
+    Ein rdy-check ob der bot sich mit discord verbinden kann
+    """
     print('We have logged in as {0.user}'.format(client))
 
 

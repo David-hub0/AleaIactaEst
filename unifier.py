@@ -6,5 +6,5 @@ def calculate(text):
     order = formater.text_format(text)
     for element in order:
         result += element
-    temp = (f"{text}= {order}= {result}")
+    temp = f"{text}= {order}= {result}"
     return temp

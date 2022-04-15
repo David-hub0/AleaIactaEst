@@ -2,6 +2,9 @@ import my_math
 
 
 def text_format(text):
+    """
+    Der Text wird in seine einzelnen Befehle aufgespalten, zu die_format geschickt und danach an unifier zurückgegeben
+    """
     # Der Befehl '!die' wird entfernt.
     orderbody = text.split('!DIE ')
     rest = orderbody[1]
@@ -20,6 +23,9 @@ def text_format(text):
 
 
 def die_format(text):
+    """
+    Einzelne Befehle werden formatiert und an my_math.wuerfeln übergeben
+    """
     temp = []
     # Dynamischer Typ von Text wird der Listen Typ aufgezwungen
     if not isinstance(text, list):
