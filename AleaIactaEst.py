@@ -1,12 +1,14 @@
 import discord
-import botToken
+import json
 import unifier
 
+from pathlib import Path
+
+conf = json.loads(Path("./conf.json").read_text())
 client = discord.Client()
-discordBotToken = botToken.discordbotboken()
+discordBotToken = conf["token"]
 
 
-#
 @client.event
 async def on_ready():
     """
