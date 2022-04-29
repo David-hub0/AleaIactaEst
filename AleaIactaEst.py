@@ -26,10 +26,10 @@ async def on_ready():
 @client.event
 async def on_message(message):
     content = message.content.strip().upper()
-    message = message.channel
+    chan = message.channel
 
     if content.startswith('!DIE'):
-        await message.send(unifier.calculate(content))
+        await chan.send(unifier.calculate(content))
     return
 
 
