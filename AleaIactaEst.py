@@ -28,7 +28,7 @@ async def on_message(message):
     content = message.content.strip().upper()
     chan = message.channel
 
-    if content.startswith('!DIE'):
+    if str(chan.id) == conf["chanID"] and content.startswith('!DIE'):
         await chan.send(unifier.calculate(content))
     return
 
