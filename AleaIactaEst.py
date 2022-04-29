@@ -1,5 +1,4 @@
 import discord
-
 import botToken
 import unifier
 

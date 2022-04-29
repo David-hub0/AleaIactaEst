@@ -1,3 +1,4 @@
+
 import formater
 
 
@@ -6,5 +7,8 @@ def calculate(text):
     order = formater.text_format(text)
     for element in order:
         result += element
-    temp = f"{text}= {order}= {result}"
-    return temp
+    ausgabetext = f": {text} = {order} = {result}"
+    if len(ausgabetext)>2000:
+        ausgabetext= f"Die detaillierte Antwort besteht aus {len(ausgabetext)} Zeichen und ist damit zu lang. Das " \
+                     f"Ergebnis ist {result} "
+    return ausgabetext

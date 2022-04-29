@@ -36,7 +36,8 @@ def die_format(text):
         # gegeben
         if 'D' in each:
             die = each.split('D')
-            temp.extend(my_math.wuerfeln(int(die[0]), int(die[1])))
+            number = my_math.wuerfeln(int(die[0]), int(die[1]))
+            temp.extend(number)
         # Die Modifier werden Separat gehandelt
         else:
             temp.append(int(each))
