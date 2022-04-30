@@ -1,12 +1,14 @@
 import discord
-import botToken
+import json
 import unifier
 
+from pathlib import Path
+
+conf = json.loads(Path("./conf.json").read_text())
 client = discord.Client()
-discordBotToken = botToken.discordbotboken()
+discordBotToken = conf["token"]
 
 
-#
 @client.event
 async def on_ready():
     """
@@ -24,10 +26,10 @@ async def on_ready():
 @client.event
 async def on_message(message):
     content = message.content.strip().upper()
-    message = message.channel
+    chan = message.channel
 
-    if content.startswith('!DIE'):
-        await message.send(unifier.calculate(content))
+    if str(chan.id) == conf["chanID"] and content.startswith('!DIE'):
+        await chan.send(unifier.calculate(content))
     return
 
 
